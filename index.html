@@ -14,13 +14,81 @@
     <!-- Additional meta tags for better SEO (optional) -->
     <meta name="description" content="My ePortfolio showcasing my projects and skills to potential employers.">
     <meta name="author" content="Your Name">
+
+    <!-- Consistent desktop-like look on mobile -->
+    <style>
+      /* Keep consistent width */
+      header, nav, section, footer {
+        width: min(1100px, 92%);
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Fixed font sizing for all screens */
+      header h1 { font-size: 2.4rem; line-height: 1.2; }
+      header p  { font-size: 1.05rem; }
+      section h2 { font-size: 1.75rem; }
+      section p  { font-size: 1.05rem; }
+
+      /* Keep location images same size on all screens */
+      header .location {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+        padding: 10px 12px;
+      }
+      header .location img[alt="Your Photo"] {
+        width: 140px; height: 140px; object-fit: cover; border-radius: 50%;
+      }
+      header .virginia-graphic {
+        width: 110px; height: 110px; object-fit: cover; border-radius: 12px;
+      }
+
+      /* Nav: horizontal layout always */
+      nav ul {
+        list-style: none;
+        margin: 0; padding: 10px;
+        display: flex; gap: 8px; justify-content: center;
+        flex-wrap: nowrap;
+      }
+      nav { overflow-x: auto; }
+      nav a {
+        white-space: nowrap;
+        font-weight: 700;
+        padding: 10px 14px;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      /* Project cards & videos consistent */
+      #projects .project {
+        padding: 18px;
+        border-radius: 14px;
+        margin-bottom: 16px;
+      }
+      #projects video {
+        display: block;
+        width: 100%;
+        max-width: 720px;
+        height: auto;
+        border-radius: 12px;
+      }
+
+      @media (max-width: 768px) {
+        .main-container { padding: 0 16px; }
+        nav { margin-bottom: 20px; }
+        section { padding: 28px 20px; }
+        header .location { flex-direction: row; }
+      }
+    </style>
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
         <h1>Camryn Melissa Miller</h1>
-        <p>Media Specialist | Editor | Web Developer | Creative Designer | Brand Builder  </p>
+        <p>Media Specialist | Editor | Web Developer | Creative Designer | Brand Builder</p>
         <div class="location">
             <!-- Headshot image -->
             <img src="headshot.jpg" alt="Your Photo" width="180" height="180">
@@ -58,8 +126,8 @@
             <video width="640" height="360" controls>
                 <source src="Final_Project_Miller.mp4" type="video/mp4">
             </video>
+        </div>
 
-        
         <!-- Second project - WordPress Website -->
         <div class="project">
             <h3>WordPress Website</h3>
@@ -86,6 +154,11 @@
     <footer>
         <p>&copy; 2025 Camryn Miller. All rights reserved.</p>
     </footer>
+</body>
+</html>
+
+
+
 </body>
 </html>
 
